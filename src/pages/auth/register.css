@@ -1,0 +1,132 @@
+/* --- login.css & register.css (Common styles for card) --- */
+.login-wrapper,
+.register-wrapper {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container,
+.register-container {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  padding: 45px;
+  border: 1px solid var(--border);
+  border-radius: 16px; /* Larger radius for modern look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+  backdrop-filter: blur(8px); /* Subtle blur effect */
+  animation: fadeIn 0.6s ease-out; /* Slower, smoother animation */
+}
+
+/* Title + Subtitle */
+.login-title, .register-title {
+  text-align: center;
+  font-size: 32px; /* Larger */
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.login-subtitle, .register-subtitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px; /* More separation */
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px; /* More separation */
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px; /* Larger touch targets */
+  border-radius: 10px; /* Soft corners */
+  background: var(--bg); /* Darker input background */
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.4); /* Primary glow */
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+
+/* Login/Register Button */
+.btn-login,
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(88, 166, 255, 0.4); /* Button shadow */
+}
+
+.btn-login:hover,
+.btn-register:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(88, 166, 255, 0.5);
+}
+
+.btn-login:active,
+.btn-register:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.login-footer, .register-footer {
+  text-align: center;
+  margin-top: 25px;
+  color: var(--text-muted);
+}
+
+.login-footer a, .register-footer a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-footer a:hover, .register-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth Fade Animation (Updated duration) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

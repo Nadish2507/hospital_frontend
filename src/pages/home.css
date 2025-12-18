@@ -1,0 +1,77 @@
+/* Dark Mode Home Page Improvements */
+
+.home-container {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+.home-title {
+  font-size: 56px; /* Much larger */
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  letter-spacing: 2px;
+  
+  /* Text effect */
+  text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+  animation: slideInDown 0.8s ease-out;
+}
+
+.home-subtitle {
+  font-size: 24px; /* Larger subtitle */
+  max-width: 700px;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  color: var(--text-muted);
+  animation: slideInUp 0.8s ease-out;
+  margin-bottom: 40px;
+}
+
+/* Keyframes for subtle home page entrance animation */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* A prominent CTA button for the home page */
+.home-cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.home-cta-button:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(88, 166, 255, 0.6);
+}
